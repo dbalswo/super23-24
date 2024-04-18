@@ -18,14 +18,33 @@ public class SinglyLinkedList {
 	   	If the position doesn't exist, it returns -1
 	*/ 
 	public int get(int pos){
+		Node tempNode = head;
+		for(int i = 0; i < pos; i++) {
+			if(i == pos) {
+				return tempNode.getData();
+			}
+			tempNode.getNext();
+		}
 
+		return -1;
 	}
 
 	/*
 		Insert a new Node at the given position with the data given
 	*/
-	public void insert(int pos int data){
-
+	public void insert(int pos, int data){
+		Node tempNode = head;
+		Node newNode = new Node(data);
+		if(head == null) {
+			return;
+		}
+		for(int i = 0; i < pos; i++) {
+			if(i==pos-1) {
+				tempNode = newNode;
+				return;
+			}
+			tempNode.getNext();
+		}
 	}
 
 	/*
@@ -33,7 +52,7 @@ public class SinglyLinkedList {
 		If no position exists, don't change the list
 	*/
 	public void remove(int pos){
-
+		
 	}
 
 	/*

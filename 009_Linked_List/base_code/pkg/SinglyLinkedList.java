@@ -3,14 +3,14 @@ import java.util.Scanner;
 import java.util.Random;
 
 
-public class LinkedList {
+public class SinglyLinkedList {
 	Node head;
 	Node tail;
 
 	/* 
 		Postcondition: The head and tail will be null 
 	*/
-	public LinkedList() {
+	public SinglyLinkedList() {
 
 	}
 
